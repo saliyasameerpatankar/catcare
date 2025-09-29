@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">My App</string>
+    <string name="appointment_details">Appointment Details</string>
+
+    <!-- Missing ones for VetVisitCreatingActivity -->
+    <string name="select_date">Select date</string>
+    <string name="select_time">Select time</string>
+
+    <string name="enter_weight">Please enter weight</string>
+    <string name="weight_alert">⚠️ Sudden weight increase detected!</string>
+
+</resources>

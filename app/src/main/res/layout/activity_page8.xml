@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@android:color/white"
+    tools:context=".page8">
+
+    <!-- Circle with Cat + Bottle + Heart -->
+    <FrameLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="20dp">
+
+        <!-- Cat Circle -->
+        <ImageView
+            android:id="@+id/catIcon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/circle_bg"
+            android:contentDescription="Cat Icon"
+            android:padding="40dp"
+            android:src="@drawable/cat_logo" />
+
+        <!-- Bottle Icon (top-left) -->
+        <ImageView
+            android:id="@+id/bottleIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/bottle"
+            android:layout_gravity="top|start"
+            android:layout_margin="12dp"
+            android:contentDescription="Bottle Icon"/>
+
+        <!-- Heart Icon (top-right) -->
+        <ImageView
+            android:id="@+id/heartIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/heart"
+            android:layout_gravity="top|end"
+            android:layout_margin="12dp"
+            android:contentDescription="Heart Icon"/>
+    </FrameLayout>
+
+    <!-- Title Text -->
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Health Info Yet!"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Subtitle Text -->
+    <TextView
+        android:id="@+id/subtitleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add health details to get started"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Add Health Info Button -->
+    <Button
+        android:id="@+id/addHealthInfoBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+ Add Health Info"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:background="@drawable/button_bg"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"/>
+
+</LinearLayout>

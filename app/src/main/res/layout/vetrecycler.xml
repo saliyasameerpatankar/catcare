@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/delete_button_border"
+    android:padding="10dp"
+    android:layout_marginBottom="6dp">
+
+    <!-- Pet Info Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/image_pet"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_bg"
+            android:src="@drawable/luna"
+            android:contentDescription="Pet Image" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:id="@+id/text_pet_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/text_cat_breed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#666666" />
+
+            <TextView
+                android:id="@+id/text_cat_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:textColor="#666666" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Next Appointment + Reminder Switch -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="6dp">
+
+        <TextView
+            android:id="@+id/textappointmentdatetime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textColor="#555555" />
+
+        <Switch
+            android:id="@+id/switchbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
+            android:padding="4dp" />
+    </LinearLayout>
+
+    <!-- Appointment Info -->
+    <TextView
+        android:id="@+id/text_visit_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textSize="16sp"
+        android:textColor="#555555" />
+
+    <TextView
+        android:id="@+id/text_clinic_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textSize="16sp"
+        android:textColor="#555555" />
+
+    <TextView
+        android:id="@+id/text_vet_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textSize="16sp"
+        android:textColor="#555555" />
+
+    <TextView
+        android:id="@+id/text_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textSize="16sp"
+        android:textColor="#555555" />
+
+    <TextView
+        android:id="@+id/text_last_visit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:textSize="16sp"
+        android:textColor="#555555" />
+
+</LinearLayout>

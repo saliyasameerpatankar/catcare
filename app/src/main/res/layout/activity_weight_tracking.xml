@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Weight Tracking"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Add New Entry -->
+    <EditText
+        android:id="@+id/etWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter weight (kg)"
+        android:inputType="numberDecimal"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/etNotes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Notes (optional)"
+        android:inputType="text"
+        android:layout_marginBottom="12dp" />
+
+    <Button
+        android:id="@+id/btnAddWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Weight Entry"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Alert Message -->
+    <TextView
+        android:id="@+id/tvAlert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="16sp"
+        android:textColor="#D32F2F"
+        android:padding="8dp"
+        android:visibility="gone"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Graph -->
+    <com.saveetha.myapp.ui.health.WeightGraphView
+        android:id="@+id/weightGraph"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- History Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="History"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- RecyclerView for history -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWeightHistory"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

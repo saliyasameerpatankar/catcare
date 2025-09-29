@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".page12">
+
+    <!-- Title Bar -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:gravity="center"
+        android:text="Add Grooming Task"
+        android:textColor="#A258F1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/formScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintBottom_toTopOf="@id/saveTaskButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <!-- Task Name -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Task Name"
+                android:textColor="#A258F1"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/taskName"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/input_bg"
+                android:drawableStart="@drawable/task"
+                android:drawablePadding="12dp"
+                android:hint="Enter task name"
+                android:paddingStart="12dp"
+                android:textColor="#A258F1"
+                android:textColorHint="#808080"
+                app:drawableTint="#A258F1" />
+
+            <!-- Frequency -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Frequency"
+                android:textColor="#A258F1"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/input_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp">
+
+                <ImageView
+                    android:id="@+id/frequencyIcon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="12dp"
+                    android:src="@drawable/frequency"
+                    app:tint="#A258F1" />
+
+                <Spinner
+                    android:id="@+id/frequencySpinner"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@android:color/transparent"
+                    android:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    android:spinnerMode="dropdown" />
+            </LinearLayout>
+
+            <!-- Last Done -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Last Done"
+                android:textColor="#A258F1"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/lastDone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/input_bg"
+                android:drawableStart="@drawable/date"
+                android:drawablePadding="12dp"
+                android:focusable="false"
+                android:hint="yyyy / mm / dd"
+                android:paddingStart="12dp"
+                android:textColor="#A258F1"
+                android:textColorHint="#808080"
+                app:drawableTint="#A258F1" />
+
+            <!-- Next Due -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Next Due"
+                android:textColor="#A258F1"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/nextDue"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/input_bg"
+                android:drawableStart="@drawable/date"
+                android:drawablePadding="12dp"
+                android:focusable="false"
+                android:hint="yyyy / mm / dd"
+                android:paddingStart="12dp"
+                android:textColor="#A258F1"
+                android:textColorHint="#808080"
+                app:drawableTint="#A258F1" />
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Save Task Button -->
+    <Button
+        android:id="@+id/saveTaskButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Save Task"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:backgroundTint="#A258F1"
+        app:layout_constraintBottom_toTopOf="@id/deleteTaskButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Delete Task Button -->
+    <Button
+        android:id="@+id/deleteTaskButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Delete Task"
+        android:textAllCaps="false"
+        android:textColor="#A258F1"
+        android:backgroundTint="@android:color/white"
+        android:background="@drawable/delete_button_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

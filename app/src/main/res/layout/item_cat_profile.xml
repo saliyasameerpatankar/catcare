@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/card_bg"
+    android:layout_marginBottom="10dp"
+    android:padding="8dp"
+    android:elevation="2dp">
+
+<ImageView
+android:id="@+id/ivCatPhoto"
+android:layout_width="60dp"
+android:layout_height="60dp"
+android:layout_marginEnd="12dp"
+android:scaleType="centerCrop"
+android:src="@drawable/luna" />
+
+<LinearLayout
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="vertical">
+
+<TextView
+    android:id="@+id/tvCatName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Luna"
+    android:textSize="16sp"
+    android:textStyle="bold" />
+
+<TextView
+    android:id="@+id/tvCatBreed"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="British Shorthair"
+    android:textSize="14sp"
+    android:textColor="#666666" />
+
+<TextView
+    android:id="@+id/tvCatAge"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="2 years old"
+    android:textSize="14sp"
+    android:textColor="#666666" />
+</LinearLayout>
+    </LinearLayout>

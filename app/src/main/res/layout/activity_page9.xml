@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".page9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Cat Icon -->
+        <ImageView
+            android:id="@+id/catIcon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/cat_logo"
+            android:contentDescription="Cat Icon"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Vaccination Status -->
+        <EditText
+            android:id="@+id/vaccinationStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select vaccination status"
+            android:drawableEnd="@drawable/injection"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Next Vet Visit -->
+        <EditText
+            android:id="@+id/nextVetVisit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="yyyy / mm / dd"
+            android:drawableEnd="@drawable/date"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Last Checkup -->
+        <EditText
+            android:id="@+id/lastCheckup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="yyyy / mm / dd"
+            android:drawableEnd="@drawable/date"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Current Weight -->
+        <EditText
+            android:id="@+id/currentWeight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter weight"
+            android:drawableEnd="@drawable/weight"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Allergies -->
+        <EditText
+            android:id="@+id/allergies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="List any allergies"
+            android:drawableEnd="@drawable/allergies"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Medical Condition -->
+        <EditText
+            android:id="@+id/medicalCondition"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter medical conditions"
+            android:drawableEnd="@drawable/heart"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Current Medication -->
+        <EditText
+            android:id="@+id/currentMedication"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="List current medications"
+            android:drawableEnd="@drawable/tablet"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Emergency Contact -->
+        <EditText
+            android:id="@+id/emergencyContact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter emergency contact"
+            android:drawableEnd="@drawable/call"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Vet Number -->
+        <EditText
+            android:id="@+id/vetNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter vet contact number"
+            android:drawableEnd="@drawable/call"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Blood Type -->
+        <EditText
+            android:id="@+id/bloodType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Select blood type"
+            android:drawableEnd="@drawable/blood"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/saveProfileBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Save Profile"
+            android:background="@drawable/button_bg"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10dp"/>
+
+        <!-- Delete Button -->
+        <Button
+            android:id="@+id/deleteProfileBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete Profile"
+            android:background="@drawable/button_bg"
+            android:textColor="@android:color/white"
+            android:layout_marginBottom="10dp"/>
+
+    </LinearLayout>
+</ScrollView>

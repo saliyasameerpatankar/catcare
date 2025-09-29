@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.saveetha.myapp">
+
+    <!-- 📌 Minimum and Target SDK -->
+    <uses-sdk
+        android:minSdkVersion="24"
+        android:targetSdkVersion="36" />
+
+    <!-- 📌 Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Backward-compatible read storage -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+
+    <!-- Android 13+ scoped storage permissions -->
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <!-- 📌 Camera is optional -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/cat_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/cat_logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Myapp"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config">
+
+        <!-- ✅ FileProvider for Photo Capture -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- 📸 Photo Booth -->
+        <activity
+            android:name=".ui.FullscreenPhotoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Myapp" />
+        <activity
+            android:name=".ui.PhotoBoothActivity"
+            android:exported="false" />
+
+        <!-- 🐾 Weight Tracking -->
+        <activity
+            android:name=".ui.health.WeightTrackingActivity"
+            android:exported="false" />
+
+        <!-- 🩺 Vet Appointments -->
+        <activity android:name=".ui.auth.VetAppointmentCreatedActivity" android:exported="false" />
+        <activity android:name=".ui.VetVisitCreatingActivity" android:exported="false" />
+        <activity android:name=".NoVetVisitYetActivity" android:exported="false" />
+        <activity android:name=".ui.GroomingScheduleActivity" android:exported="false" />
+
+        <!-- 📄 Cat Profile & Other Pages -->
+        <activity android:name=".Page5" android:exported="false" android:label="Update Cat Profile" />
+        <activity android:name=".page4" android:exported="false" />
+        <activity android:name=".page3" android:exported="false" />
+        <activity android:name=".ui.auth.page2" android:exported="false" />
+        <activity android:name=".ui.auth.page1" android:exported="false" />
+        <activity android:name=".page12" android:exported="false" />
+        <activity android:name=".page11" android:exported="false" />
+        <activity android:name=".page9" android:exported="false" />
+        <activity android:name=".activity_page8" android:exported="false" />
+        <activity android:name=".activity8" android:exported="false" />
+        <activity android:name=".page8" android:exported="false" />
+        <activity android:name=".ui.auth.Page77" android:exported="false" />
+        <activity android:name=".Page6" android:exported="false" />
+        <activity android:name=".item_start" android:exported="false" />
+
+        <!-- 🚀 Main Launcher -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Myapp">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top bar: back + centered title -->
+
+
+    <!-- Illustration block -->
+    <FrameLayout
+
+        android:layout_width="260dp"
+        android:layout_height="260dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="12dp">
+
+        <!-- big circle background -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/circle_bg" />
+
+        <!-- center cat image -->
+        <ImageView
+            android:id="@+id/catImage"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_gravity="center"
+            android:src="@drawable/cat_logo"
+            android:contentDescription="Cat" />
+
+        <!-- small heart (left middle) -->
+        <ImageView
+            android:id="@+id/heartIcon"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginStart="14dp"
+            android:src="@drawable/heart"
+            android:contentDescription="Heart" />
+
+        <!-- bottle (bottom-left) -->
+        <ImageView
+            android:id="@+id/bottleIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="bottom|start"
+            android:layout_marginStart="18dp"
+            android:layout_marginBottom="18dp"
+            android:src="@drawable/bottle"
+            android:contentDescription="Bottle" />
+
+        <!-- brush (top-right) -->
+        <ImageView
+            android:id="@+id/brushIcon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="top|end"
+            android:layout_margin="18dp"
+            android:src="@drawable/brush"
+            android:contentDescription="Brush" />
+    </FrameLayout>
+
+    <!-- headline -->
+    <TextView
+        android:id="@+id/emptyTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="18dp"
+        android:text="No Grooming Schedule Yet"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black" />
+
+    <!-- subtitle (2 lines, centered) -->
+    <TextView
+        android:id="@+id/emptySubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:paddingStart="28dp"
+        android:paddingEnd="28dp"
+        android:text="Start creating grooming tasks to
+keep your furry friend clean and happy!"
+        android:textSize="14sp"
+        android:textColor="#7E7E7E" />
+
+
+
+</LinearLayout>

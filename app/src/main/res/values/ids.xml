@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="emailEditText" type="id"/>
+    <item name="passwordEditText" type="id"/>
+    <item name="signInButton" type="id"/>
+    <item name="signinclick" type="id"/>
+    <item name="signupButton" type="id"/>
+    <item name="passwordToggle" type="id"/>
+
+        <item name="tvWelcome" type="id" />
+        <item name="ivSearch" type="id" />
+        <item name="btnAddNewPet" type="id" />
+        <item name="petCard1" type="id" />
+        <item name="ivPet1" type="id" />
+        <item name="tvPetName1" type="id" />
+        <item name="tvPetBreed1" type="id" />
+        <item name="tvPetAge1" type="id" />
+        <!-- Add other ids similarly if needed -->
+
+
+
+
+</resources>

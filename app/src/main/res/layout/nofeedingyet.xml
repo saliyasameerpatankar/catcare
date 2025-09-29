@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <!-- Top Toolbar -->
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+
+        app:navigationIcon="@drawable/ic_arrow_back"
+        app:title="Feeding Schedule"
+        app:titleCentered="true"
+        app:titleTextColor="@android:color/black" />
+
+    <!-- Main Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="20dp">
+
+        <!-- Feeding Image -->
+        <ImageView
+            android:id="@+id/feedingImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginBottom="20dp"
+            android:contentDescription="feeding_image"
+            android:src="@drawable/feeding" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/noScheduleTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="No Feeding Schedule Yet!"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <!-- Subtitle -->
+        <TextView
+            android:id="@+id/noScheduleSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:text="Add a feeding schedule to get started!"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="14sp" />
+
+        <!-- Add Schedule Button -->
+        <Button
+            android:id="@+id/addScheduleBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_bg"
+            android:text="Add Feeding Schedule"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+</LinearLayout>

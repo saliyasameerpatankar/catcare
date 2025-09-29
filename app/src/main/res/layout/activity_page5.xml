@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Cat Profile"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#000"
+            android:gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Profile Image + Upload Icon -->
+        <FrameLayout
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:id="@+id/cat_placeholder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/circle_bg"
+                android:scaleType="fitCenter"
+                android:src="@drawable/cat_logo"
+                android:contentDescription="Cat photo" />
+
+            <ImageView
+                android:id="@+id/upload_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom|end"
+                android:layout_margin="8dp"
+                android:background="@drawable/circle_bg"
+                android:backgroundTint="#8A2BE2"
+                android:contentDescription="Upload cat photo"
+                android:padding="8dp"
+                android:src="@drawable/ic_camera"
+                android:tint="#FFFFFF" />
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upload Photo"
+            android:textColor="#666"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Input Fields -->
+        <EditText
+            android:id="@+id/edit_cat_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter your cat's name"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:inputType="textCapWords"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/edit_breed"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter cat breed"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:inputType="textCapWords"
+            android:layout_marginBottom="16dp" />
+
+        <EditText
+            android:id="@+id/edit_age"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter age"
+            android:background="@drawable/edittext_bg"
+            android:padding="12dp"
+            android:inputType="number"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Gender -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender"
+            android:textSize="16sp"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
+
+        <RadioGroup
+            android:id="@+id/genderRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/radio_male"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Male"
+                android:textColor="#000"
+                android:gravity="center"
+                android:buttonTint="#8A2BE2" />
+
+            <RadioButton
+                android:id="@+id/radio_female"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:text="Female"
+                android:textColor="#000"
+                android:gravity="center"
+                android:buttonTint="#8A2BE2" />
+        </RadioGroup>
+
+        <!-- Save Button -->
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Save Profile"
+            android:textColor="#FFF"
+            android:textSize="16sp"
+            android:background="@drawable/button_bg"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Delete Button -->
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Delete Profile"
+            android:textColor="#FFF"
+            android:textSize="16sp"
+            android:backgroundTint="#D32F2F"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Cancel -->
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:textColor="#8A2BE2"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_gravity="center" />
+
+    </LinearLayout>
+</ScrollView>

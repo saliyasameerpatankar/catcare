@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/delete_button_border"
+        android:orientation="vertical"
+       android:layout_marginBottom="5dp"
+        >
+
+        <!-- Top Row: Task Title & Switch -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/taskTitleTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Task Title"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <Switch
+                android:id="@+id/taskSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="48dp"
+                android:minHeight="48dp"
+                android:padding="4dp" />
+        </LinearLayout>
+
+        <!-- Frequency -->
+        <TextView
+            android:id="@+id/frequencyTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Frequency: Daily"
+            android:textSize="14sp"
+            android:textColor="#555555" />
+
+        <!-- Last Done -->
+        <TextView
+            android:id="@+id/lastDoneTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Last Done: Jan 01, 2024"
+            android:textSize="14sp"
+            android:textColor="#555555" />
+
+        <!-- Next Due -->
+        <TextView
+            android:id="@+id/nextDueTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Next Due: Jan 10, 2024"
+            android:textSize="14sp"
+            android:textColor="#555555" />
+
+    </LinearLayout>
+

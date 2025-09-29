@@ -1,0 +1,20 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Heart shape -->
+    <path
+        android:fillColor="#9C27B0"
+        android:pathData="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+            c0-2.49 2.01-4.5 4.5-4.5 1.74 0 3.41 1.01 4.07 2.57
+            h1.87C14.09 5.01 15.76 4 17.5 4
+            C19.99 4 22 6.01 22 8.5c0 3.78-3.4 6.86-8.55 11.54
+            L12 21.35z"/>
+
+    <!-- Medical cross -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M13 8h-2v2H9v2h2v2h2v-2h2v-2h-2V8z"/>
+</vector>

@@ -1,0 +1,230 @@
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+
+            <!-- Toolbar -->
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:background="?attr/colorPrimary"
+                android:contentInsetStartWithNavigation="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:navigationIcon="@drawable/ic_arrow_back">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Vet Appointments"
+                    android:textColor="@android:color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </androidx.appcompat.widget.Toolbar>
+
+            <!-- Pet Image -->
+            <ImageView
+                android:id="@+id/image_pet"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/circle_bg"
+                android:contentDescription="Pet Image"
+                android:scaleType="centerCrop"
+                android:src="@drawable/luna"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Pet Name -->
+            <TextView
+                android:id="@+id/text_pet_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Max"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/image_pet"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Pet Breed + Age -->
+            <TextView
+                android:id="@+id/text_pet_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Persian • 2 years"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/text_pet_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Appointment Box -->
+            <LinearLayout
+                android:id="@+id/layout_appointment_box"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/border_box"
+                android:padding="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                app:layout_constraintTop_toBottomOf="@id/text_pet_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <!-- Next Appointment -->
+                <TextView
+                    android:id="@+id/text_next_appointment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Next Appointment"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/button_select_date"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_bg"
+                        android:text="@string/select_date" />
+
+                    <Button
+                        android:id="@+id/button_select_time"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:background="@drawable/edittext_bg"
+                        android:text="@string/select_time" />
+                </LinearLayout>
+
+                <!-- Reason -->
+                <TextView
+                    android:id="@+id/text_visit_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Reason / Visit Type" />
+
+                <Spinner
+                    android:id="@+id/spinner_visit_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edittext_bg" />
+
+                <!-- Clinic -->
+                <TextView
+                    android:id="@+id/text_clinic_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Clinic / Vet Details" />
+
+                <EditText
+                    android:id="@+id/edit_clinic_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edittext_bg"
+                    android:hint="Clinic name" />
+
+                <EditText
+                    android:id="@+id/edit_vet_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edittext_bg"
+                    android:hint="Vet name" />
+
+                <EditText
+                    android:id="@+id/edit_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edittext_bg"
+                    android:hint="Phone number"
+                    android:inputType="phone" />
+
+                <!-- Last Visit -->
+                <TextView
+                    android:id="@+id/text_last_visit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Last Visit" />
+
+                <Button
+                    android:id="@+id/button_last_visit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/edittext_bg"
+                    android:text="@string/select_date" />
+
+                <!-- Save / Delete Buttons -->
+                <LinearLayout
+                    android:id="@+id/layout_buttons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="16dp">
+
+                    <Button
+                        android:id="@+id/button_save"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_bg"
+                        android:text="Save" />
+
+                    <Space
+                        android:layout_width="16dp"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/button_delete"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_bg"
+                        android:text="Delete"
+                        android:textColor="@android:color/holo_red_dark" />
+                </LinearLayout>
+
+                <!-- Progress -->
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="16dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
